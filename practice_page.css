@@ -25,3 +25,8 @@ body{
     margin: 5em 30% 10em 30%;
 	width:	40%;
 }
+
+#results {
+	max-width: 300px;
+	width: 300px;
+}
