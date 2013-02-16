@@ -29,11 +29,23 @@ function all_boxes_filled(theForm){
     return true;
 }
 
- /* adds a new paragraph to the page's div for each form element, filling each with data
+ /* adds a new paragraph to the page's div for each entry, filling with data
  	from one of the field's forms 
  	hint: theParagraph.innerHTML = theData; */
+ 	/*NOTE THIS IS NON-PERSISTENT*/
 function append_form_data_to_page(theForm){
-
+  var name=theForm.getElementById(name).value;
+  var city=theForm.getElementById(city).value;
+  var food=theForm.getElementById(food).value;
+  
+  //var msg=name+" is from "+city+", and their favorite food is "+food".";
+  
+  //var mainContent=getElementById(main_content);
+  //para=document.createElement("p");
+  //node=document.createTextNode(name);
+  //para.appendChild(node);
+  
+  //document.getElementById(results).insert(para);
   
 }
 

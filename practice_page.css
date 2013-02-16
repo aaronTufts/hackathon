@@ -30,3 +30,7 @@ body{
 	max-width: 300px;
 	width: 300px;
 }
+
+#results_header {
+	font-weight: bold;
+}
