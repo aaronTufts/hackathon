@@ -1,14 +1,14 @@
 
-var FORM_ID = "";
+var FORM_ID = "practice_form";
 
 function make_alert(){
   alert("greetings!");
 }
 
 function check_form(){
-  var form = document.getElementByID(FORM_ID)
+  var form = document.getElementById(FORM_ID)
   if(all_boxes_filled(form)){
-    append_form_data_to_page(form);
+     append_form_data_to_page(form);
   }
   else{
     alert("You must fill in all the boxes!");
@@ -18,7 +18,15 @@ function check_form(){
   /* given a reference to a form, checks that the value of it's members is != "" 
      hint: theForm.elements[i].value != "", where theForm.length is how many elements it has */
 function all_boxes_filled(theForm){
-
+    var length = theForm.length;  // whoa, my intuition from 40 is to pull this out of
+                                  // the loop for performance...but does it
+                                  // matter for web stuff?
+    for (var i = 0; i < length; i++) {
+        if (theForm.elements[i].value == "") {
+            return false;
+        }
+    }
+    return true;
 }
 
  /* adds a new paragraph to the page's div for each form element, filling each with data
