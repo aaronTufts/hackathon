@@ -34,19 +34,18 @@ function all_boxes_filled(theForm){
  	hint: theParagraph.innerHTML = theData; */
  	/*NOTE THIS IS NON-PERSISTENT*/
 function append_form_data_to_page(theForm){
-  var name=theForm.getElementById(name).value;
-  var city=theForm.getElementById(city).value;
-  var food=theForm.getElementById(food).value;
+  var name=theForm.elements[0].value;
+  var city=theForm.elements[1].value;
+  var food=theForm.elements[2].value;
   
-  //var msg=name+" is from "+city+", and their favorite food is "+food".";
+  var msg=name+" is from "+city+", and their favorite food is "+food+".";
+    
+  var reuslts=document.getElementById(results);
+  para=document.createElement("p");
+  node=document.createTextNode(msg);
+  para.appendChild(node);
   
-  //var mainContent=getElementById(main_content);
-  //para=document.createElement("p");
-  //node=document.createTextNode(name);
-  //para.appendChild(node);
-  
-  //document.getElementById(results).insert(para);
-  
+  results.appendChild(para);
 }
 
 
