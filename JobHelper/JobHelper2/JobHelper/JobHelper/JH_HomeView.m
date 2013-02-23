@@ -28,12 +28,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+/*
 - (BOOL)textFieldShouldReturn:(UITextField *)theTextField {
     if (theTextField == self.toDoList) {
         [theTextField resignFirstResponder];
     }
     return YES;
 }
+ */
 
 /*
 - (BOOL)textViewShouldEndEditing:(UITextView *)textView{

@@ -20,6 +20,8 @@
 		A7E9298016D9567300E150F3 /* JH_HomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E9297F16D9567300E150F3 /* JH_HomeView.m */; };
 		A7E9298816D956B600E150F3 /* JH_AllJobsView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E9298716D956B600E150F3 /* JH_AllJobsView.m */; };
 		A7E9298B16D95C4E00E150F3 /* JH_JobView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E9298A16D95C4E00E150F3 /* JH_JobView.m */; };
+		A7E9298E16D97C2700E150F3 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7E9298C16D97C2700E150F3 /* Model.xcdatamodeld */; };
+		A7E9299016D97D6600E150F3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E9298F16D97D6600E150F3 /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		A7E9298716D956B600E150F3 /* JH_AllJobsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JH_AllJobsView.m; sourceTree = "<group>"; };
 		A7E9298916D95C4E00E150F3 /* JH_JobView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JH_JobView.h; sourceTree = "<group>"; };
 		A7E9298A16D95C4E00E150F3 /* JH_JobView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JH_JobView.m; sourceTree = "<group>"; };
+		A7E9298D16D97C2700E150F3 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		A7E9298F16D97D6600E150F3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7E9299016D97D6600E150F3 /* CoreData.framework in Frameworks */,
 				A7E9296416D9567300E150F3 /* UIKit.framework in Frameworks */,
 				A7E9296616D9567300E150F3 /* Foundation.framework in Frameworks */,
 				A7E9296816D9567300E150F3 /* CoreGraphics.framework in Frameworks */,
@@ -79,6 +84,7 @@
 		A7E9296216D9567300E150F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A7E9298F16D97D6600E150F3 /* CoreData.framework */,
 				A7E9296316D9567300E150F3 /* UIKit.framework */,
 				A7E9296516D9567300E150F3 /* Foundation.framework */,
 				A7E9296716D9567300E150F3 /* CoreGraphics.framework */,
@@ -94,6 +100,7 @@
 				A7E9297B16D9567300E150F3 /* MainStoryboard.storyboard */,
 				A7E9297E16D9567300E150F3 /* JH_HomeView.h */,
 				A7E9297F16D9567300E150F3 /* JH_HomeView.m */,
+				A7E9298C16D97C2700E150F3 /* Model.xcdatamodeld */,
 				A7E9298916D95C4E00E150F3 /* JH_JobView.h */,
 				A7E9298A16D95C4E00E150F3 /* JH_JobView.m */,
 				A7E9296A16D9567300E150F3 /* Supporting Files */,
@@ -189,6 +196,7 @@
 				A7E9298016D9567300E150F3 /* JH_HomeView.m in Sources */,
 				A7E9298816D956B600E150F3 /* JH_AllJobsView.m in Sources */,
 				A7E9298B16D95C4E00E150F3 /* JH_JobView.m in Sources */,
+				A7E9298E16D97C2700E150F3 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +321,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A7E9298C16D97C2700E150F3 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A7E9298D16D97C2700E150F3 /* Model.xcdatamodel */,
+			);
+			currentVersion = A7E9298D16D97C2700E150F3 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A7E9295816D9567300E150F3 /* Project object */;
 }
