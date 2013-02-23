@@ -9,7 +9,7 @@
 #import "testSecondViewController.h"
 
 @interface testSecondViewController ()
-
+@property (nonatomic) NSString* note;
 @end
 
 @implementation testSecondViewController
