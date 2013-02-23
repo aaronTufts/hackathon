@@ -10,4 +10,6 @@
 
 @interface JobHelpController : NSObject
 
+@property (atomic)NSDictionary* table;
+
 @end
