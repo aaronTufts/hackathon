@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="d3H-Mn-BAR">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Job Helper View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="JobHelperViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ULX-gw-zA9">
+                        <barButtonItem key="rightBarButtonItem" title="my jobs" id="rqD-6d-BZM">
+                            <connections>
+                                <segue destination="qdj-LY-Pmu" kind="modal" identifier="secondPage" modalTransitionStyle="flipHorizontal" id="RHN-FV-piP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1409" y="-389"/>
+        </scene>
+        <!--Job Helper Second View Controller - my jobs-->
+        <scene sceneID="nuz-mi-Mer">
+            <objects>
+                <tableViewController id="j3g-ij-0n0" customClass="JobHelperSecondViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="YUd-N4-DXm">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FooIdentifier" id="e8q-BM-n8V">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="j3g-ij-0n0" id="ZG8-F1-X2B"/>
+                            <outlet property="delegate" destination="j3g-ij-0n0" id="906-zB-TZE"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="my jobs" id="nve-ix-Yri">
+                        <barButtonItem key="leftBarButtonItem" title="back" id="ORT-4z-G0d">
+                            <connections>
+                                <segue destination="d3H-Mn-BAR" kind="modal" identifier="returnHome" modalTransitionStyle="flipHorizontal" id="HqH-5R-857"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rgU-oB-Mdi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1430" y="288"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ODd-6A-QCr">
+            <objects>
+                <navigationController id="d3H-Mn-BAR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Xp3-6L-1iE"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CNZ-af-kuI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="dAv-Ur-kST"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gho-kc-h1W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="952" y="-389"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lfJ-eD-vXq">
+            <objects>
+                <navigationController id="qdj-LY-Pmu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="4W3-Oi-IN3"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dsz-Jm-FpN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="j3g-ij-0n0" kind="relationship" relationship="rootViewController" id="YkX-r0-RVI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lTp-A0-lhc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944" y="288"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="JobHelperSecondViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/JobHelperSecondViewController.h"/>
+        </class>
+        <class className="JobHelperViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/JobHelperViewController.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
