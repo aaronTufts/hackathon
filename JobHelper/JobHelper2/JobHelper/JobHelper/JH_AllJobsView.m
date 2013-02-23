@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 j.a.m. All rights reserved.
 //
 
-#import "JobHelperSecondViewController.h"
+#import "JH_AllJobsView.h"
 
-@interface JobHelperSecondViewController ()
+@interface JH_AllJobsView ()
 
 @end
 
-@implementation JobHelperSecondViewController
+@implementation JH_AllJobsView
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -118,4 +118,7 @@
      */
 }
 
+- (IBAction)addJob:(UIBarButtonItem *)sender {
+    
+}
 @end

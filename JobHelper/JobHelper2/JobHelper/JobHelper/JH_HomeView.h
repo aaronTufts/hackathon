@@ -1,5 +1,5 @@
 //
-//  JobHelperJobViewController.h
+//  JobHelperViewController.h
 //  JobHelper
 //
 //  Created by Aaron Tietz on 2/23/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JobHelperJobViewController : UIViewController
+@interface JH_HomeView : UIViewController <UITextFieldDelegate>
 
 @end

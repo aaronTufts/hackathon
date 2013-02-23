@@ -1,5 +1,5 @@
 //
-//  JobHelperViewController.h
+//  JobHelperJobViewController.h
 //  JobHelper
 //
 //  Created by Aaron Tietz on 2/23/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JobHelperViewController : UIViewController
+@interface JH_JobView : UIViewController
 
 @end

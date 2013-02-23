@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JobHelperSecondViewController : UITableViewController
+@interface JH_AllJobsView : UITableViewController
+
+- (IBAction)addJob:(UIBarButtonItem *)sender;
 
 @end

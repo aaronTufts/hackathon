@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 j.a.m. All rights reserved.
 //
 
-#import "JobHelperJobViewController.h"
+#import "JH_JobView.h"
 
-@interface JobHelperJobViewController ()
+@interface JH_JobView ()
 
 @end
 
-@implementation JobHelperJobViewController
+@implementation JH_JobView
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
