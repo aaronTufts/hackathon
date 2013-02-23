@@ -24,6 +24,7 @@
 		A7BBA6D616D7E03200BFBE85 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7BBA6D516D7E03200BFBE85 /* second@2x.png */; };
 		A7BBA6D916D7E03200BFBE85 /* testFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7BBA6D716D7E03200BFBE85 /* testFirstViewController.xib */; };
 		A7BBA6DC16D7E03200BFBE85 /* testSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7BBA6DA16D7E03200BFBE85 /* testSecondViewController.xib */; };
+		A7BBA6E416D86AE000BFBE85 /* JobHelpController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BBA6E316D86AE000BFBE85 /* JobHelpController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,8 @@
 		A7BBA6D516D7E03200BFBE85 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		A7BBA6D816D7E03200BFBE85 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/testFirstViewController.xib; sourceTree = "<group>"; };
 		A7BBA6DB16D7E03200BFBE85 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/testSecondViewController.xib; sourceTree = "<group>"; };
+		A7BBA6E216D86AE000BFBE85 /* JobHelpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobHelpController.h; sourceTree = "<group>"; };
+		A7BBA6E316D86AE000BFBE85 /* JobHelpController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobHelpController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +101,8 @@
 			children = (
 				A7BBA6C016D7E03200BFBE85 /* testAppDelegate.h */,
 				A7BBA6C116D7E03200BFBE85 /* testAppDelegate.m */,
+				A7BBA6E216D86AE000BFBE85 /* JobHelpController.h */,
+				A7BBA6E316D86AE000BFBE85 /* JobHelpController.m */,
 				A7BBA6C916D7E03200BFBE85 /* testFirstViewController.h */,
 				A7BBA6CA16D7E03200BFBE85 /* testFirstViewController.m */,
 				A7BBA6CC16D7E03200BFBE85 /* first.png */,
@@ -203,6 +208,7 @@
 				A7BBA6C216D7E03200BFBE85 /* testAppDelegate.m in Sources */,
 				A7BBA6CB16D7E03200BFBE85 /* testFirstViewController.m in Sources */,
 				A7BBA6D216D7E03200BFBE85 /* testSecondViewController.m in Sources */,
+				A7BBA6E416D86AE000BFBE85 /* JobHelpController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
