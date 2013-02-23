@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface JobHelpController : NSObject
-
+@property (atomic) NSString* conflict;
 @end
