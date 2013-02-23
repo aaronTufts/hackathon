@@ -17,12 +17,12 @@
 		A7E9293B16D9411600E150F3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E9293A16D9411600E150F3 /* Default@2x.png */; };
 		A7E9293D16D9411600E150F3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E9293C16D9411600E150F3 /* Default-568h@2x.png */; };
 		A7E9294016D9411600E150F3 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7E9293E16D9411600E150F3 /* MainStoryboard.storyboard */; };
-		A7E9294316D9411600E150F3 /* JobHelperFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E9294216D9411600E150F3 /* JobHelperFirstViewController.m */; };
 		A7E9294516D9411600E150F3 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E9294416D9411600E150F3 /* first.png */; };
 		A7E9294716D9411600E150F3 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E9294616D9411600E150F3 /* first@2x.png */; };
 		A7E9294A16D9411600E150F3 /* JobHelperSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E9294916D9411600E150F3 /* JobHelperSecondViewController.m */; };
 		A7E9294C16D9411600E150F3 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E9294B16D9411600E150F3 /* second.png */; };
 		A7E9294E16D9411600E150F3 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E9294D16D9411600E150F3 /* second@2x.png */; };
+		A7E9295616D9534200E150F3 /* JobHelperTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E9295516D9534200E150F3 /* JobHelperTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,14 +40,14 @@
 		A7E9293A16D9411600E150F3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		A7E9293C16D9411600E150F3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		A7E9293F16D9411600E150F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		A7E9294116D9411600E150F3 /* JobHelperFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JobHelperFirstViewController.h; sourceTree = "<group>"; };
-		A7E9294216D9411600E150F3 /* JobHelperFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JobHelperFirstViewController.m; sourceTree = "<group>"; };
 		A7E9294416D9411600E150F3 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		A7E9294616D9411600E150F3 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
 		A7E9294816D9411600E150F3 /* JobHelperSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JobHelperSecondViewController.h; sourceTree = "<group>"; };
 		A7E9294916D9411600E150F3 /* JobHelperSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JobHelperSecondViewController.m; sourceTree = "<group>"; };
 		A7E9294B16D9411600E150F3 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		A7E9294D16D9411600E150F3 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		A7E9295416D9534200E150F3 /* JobHelperTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobHelperTableViewController.h; sourceTree = "<group>"; };
+		A7E9295516D9534200E150F3 /* JobHelperTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobHelperTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +97,11 @@
 				A7E9293516D9411600E150F3 /* JobHelperAppDelegate.h */,
 				A7E9293616D9411600E150F3 /* JobHelperAppDelegate.m */,
 				A7E9293E16D9411600E150F3 /* MainStoryboard.storyboard */,
-				A7E9294116D9411600E150F3 /* JobHelperFirstViewController.h */,
-				A7E9294216D9411600E150F3 /* JobHelperFirstViewController.m */,
 				A7E9294416D9411600E150F3 /* first.png */,
 				A7E9294616D9411600E150F3 /* first@2x.png */,
 				A7E9294816D9411600E150F3 /* JobHelperSecondViewController.h */,
+				A7E9295416D9534200E150F3 /* JobHelperTableViewController.h */,
+				A7E9295516D9534200E150F3 /* JobHelperTableViewController.m */,
 				A7E9294916D9411600E150F3 /* JobHelperSecondViewController.m */,
 				A7E9294B16D9411600E150F3 /* second.png */,
 				A7E9294D16D9411600E150F3 /* second@2x.png */,
@@ -197,8 +197,8 @@
 			files = (
 				A7E9293316D9411600E150F3 /* main.m in Sources */,
 				A7E9293716D9411600E150F3 /* JobHelperAppDelegate.m in Sources */,
-				A7E9294316D9411600E150F3 /* JobHelperFirstViewController.m in Sources */,
 				A7E9294A16D9411600E150F3 /* JobHelperSecondViewController.m in Sources */,
+				A7E9295616D9534200E150F3 /* JobHelperTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
