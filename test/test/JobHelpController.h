@@ -12,4 +12,5 @@
 
 @property (atomic)NSDictionary* table;
 
+@property (atomic) NSString* conflict;
 @end
