@@ -11,12 +11,27 @@
                     <view key="view" contentMode="scaleToFill" id="3">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="This is my todo list" translatesAutoresizingMaskIntoConstraints="NO" id="REq-4C-eyq">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="308" id="nu0-wE-YvG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="REq-4C-eyq" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="b2f-ZV-URd"/>
+                            <constraint firstItem="REq-4C-eyq" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="iWs-gq-MLZ"/>
+                            <constraint firstItem="REq-4C-eyq" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="xuK-Jm-Rpe"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ULX-gw-zA9">
                         <barButtonItem key="rightBarButtonItem" title="my jobs" id="rqD-6d-BZM">
                             <connections>
-                                <segue destination="qdj-LY-Pmu" kind="modal" identifier="secondPage" modalTransitionStyle="flipHorizontal" id="RHN-FV-piP"/>
+                                <segue destination="qdj-LY-Pmu" kind="modal" identifier="goToSecondPage" modalTransitionStyle="flipHorizontal" id="RHN-FV-piP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -42,6 +57,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <segue destination="C5g-L7-L23" kind="modal" identifier="goToJobView" modalTransitionStyle="flipHorizontal" id="Pid-qu-bpQ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -52,14 +70,35 @@
                     <navigationItem key="navigationItem" title="my jobs" id="nve-ix-Yri">
                         <barButtonItem key="leftBarButtonItem" title="back" id="ORT-4z-G0d">
                             <connections>
-                                <segue destination="d3H-Mn-BAR" kind="modal" identifier="returnHome" modalTransitionStyle="flipHorizontal" id="HqH-5R-857"/>
+                                <segue destination="d3H-Mn-BAR" kind="modal" identifier="returnToHome" modalTransitionStyle="flipHorizontal" id="HqH-5R-857"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rgU-oB-Mdi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1430" y="288"/>
+            <point key="canvasLocation" x="1401" y="330"/>
+        </scene>
+        <!--Job Helper Job View Controller - job view-->
+        <scene sceneID="MMk-z7-Z5c">
+            <objects>
+                <viewController id="lZb-a2-tGY" customClass="JobHelperJobViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e5x-Da-OJ9">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="job view" id="c5w-5w-xs9">
+                        <barButtonItem key="leftBarButtonItem" title="back" id="3fz-iE-TOd">
+                            <connections>
+                                <segue destination="qdj-LY-Pmu" kind="modal" identifier="returnToAllJobs" modalTransitionStyle="flipHorizontal" id="ZYC-eK-nqG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yjw-NX-Yhk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1878" y="314"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ODd-6A-QCr">
@@ -99,13 +138,37 @@
             </objects>
             <point key="canvasLocation" x="944" y="288"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LPY-Gz-Fcc">
+            <objects>
+                <navigationController id="C5g-L7-L23" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xew-cG-fH5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lZb-a2-tGY" kind="relationship" relationship="rootViewController" id="Ce4-3J-Qnf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="al4-sg-CZp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1878" y="-389"/>
+        </scene>
     </scenes>
     <classes>
+        <class className="JobHelperJobViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/JobHelperJobViewController.h"/>
+        </class>
         <class className="JobHelperSecondViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/JobHelperSecondViewController.h"/>
         </class>
         <class className="JobHelperViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/JobHelperViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -113,4 +176,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="RHN-FV-piP"/>
+    </inferredMetricsTieBreakers>
 </document>
