@@ -103,7 +103,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
-                                            <segue destination="exl-7l-HIo" kind="modal" modalTransitionStyle="flipHorizontal" id="YSL-CS-O2K"/>
+                                            <segue destination="exl-7l-HIo" kind="modal" identifier="toMakeEventPage" modalTransitionStyle="flipHorizontal" id="YSL-CS-O2K"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
