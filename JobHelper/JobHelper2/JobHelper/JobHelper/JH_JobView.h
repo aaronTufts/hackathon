@@ -10,6 +10,7 @@
 @class JH_dataController;
 #import "JH_AppDelegate.h"
 #import <QuartzCore/QuartzCore.h>
+#import "EvernoteSDK.h"
 
 @interface JH_JobView : UIViewController <UITextFieldDelegate, UIScrollViewDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *company;
@@ -22,5 +23,10 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *jobViewScroll;
 - (IBAction)updateJob:(id)sender;
 - (IBAction)goBack:(id)sender;
+- (IBAction)exportJobToEvernote:(id)sender;
+
+- (void)createNote:(EDAMNote *)note
+           success:(void(^)(EDAMNote *note))success
+           failure:(void(^)(NSError *error))failure;
 
 @end
