@@ -15,7 +15,11 @@
 @interface JH_dataController : NSObject
 
 @property (nonatomic) NSMutableArray* curJob;
+@property (nonatomic) NSMutableDictionary* allEvents;
+@property (nonatomic) NSMutableString* curEventName;
 @property (strong, nonatomic) NSMutableArray* allJobs;
+
+
 /*
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
@@ -27,6 +31,9 @@
 -(void)addJob:(NSMutableArray*) job;
 //-(NSURL *)applicationDocumentsDirectory;
 -(void)addDummy;
+
+-(void)updateEvent:(NSString*)name withDate:(NSDate*)date;
+
 
 
 
