@@ -74,9 +74,8 @@
                                      "<br />"
                                      "</en-note>"];
             EDAMNote *newNote = [[EDAMNote alloc] initWithGuid:nil title:@"Test note" content:noteContent contentHash:nil contentLength:noteContent.length created:0 updated:0 deleted:0 active:YES updateSequenceNum:0 notebookGuid:nil tagGuids:nil resources:nil attributes:nil tagNames:nil];
-            NSLog(@"Hey I just met you and this is crazy");
             [[EvernoteNoteStore noteStore] createNote:newNote success:^(EDAMNote *note) {
-                NSLog(@"I gots the stuff");
+                NSLog(@"Note exported successfully");
             } failure:^(NSError *error) {
                 NSLog(@"Error creating note : %@",error);
             }];
