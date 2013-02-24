@@ -138,10 +138,11 @@
 }
 
 - (IBAction)makeJob:(id)sender {
+    [_dc selectJob:-1];
+    NSLog(@"adding new job?");
+    [self performSegueWithIdentifier:@"toJobView" sender:self];
 }
 
-- (IBAction)addJob:(UIBarButtonItem *)sender {
-  [_dc selectJob:-1];
-  [self performSegueWithIdentifier:@"toJobView" sender:self];
-}
+
+
 @end

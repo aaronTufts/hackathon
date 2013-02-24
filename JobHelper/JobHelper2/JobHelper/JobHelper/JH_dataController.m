@@ -26,15 +26,20 @@
 }
 
 -(void)selectJob:(int) job{
-   // NSLog(@"table sent row %d", job);
-    self.curJob=self.allJobs[job];
+    NSLog(@"table sent row %d", job);
+    if(job==-1){
+        self.curJob=nil;
+    }else{
+        self.curJob=self.allJobs[job];
+    }
 }
 
--(NSArray*)getJobs{
+-(NSMutableArray*)getJobs{
     return self.allJobs;
 }
 -(void)addJob:(NSMutableArray*) job{
     [self.allJobs addObject:job];
+    self.curJob = job;
 }
 -(void)addDummy{
     NSMutableArray* job = [NSMutableArray arrayWithObjects:@"jobTitle",@"company",@"contact",@"location",@"notes",nil];
