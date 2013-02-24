@@ -29,6 +29,7 @@
     [super viewDidLoad];
     JH_AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     _dc = [appDelegate dataController];
+    //_jobs = [NSArray arrayWithObjects: @"1", @"2", @"3", nil];
     _jobs = [_dc getJobs];
     
     /*
@@ -132,15 +133,16 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
     [_dc selectJob:[indexPath row]];
-    NSLog(@"user toched cell %d", [indexPath row]);
+   // NSLog(@"user toched cell %d", [indexPath row]);
     [self performSegueWithIdentifier:@"toJobView" sender:self];
 }
 
 - (IBAction)makeJob:(id)sender {
+    [_dc selectJob:-1];
+    NSLog(@"adding new job?");
+    [self performSegueWithIdentifier:@"toJobView" sender:self];
 }
 
-- (IBAction)addJob:(UIBarButtonItem *)sender {
-  [_dc selectJob:-1];
-  [self performSegueWithIdentifier:@"toJobView" sender:self];
-}
+
+
 @end

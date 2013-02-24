@@ -11,7 +11,7 @@
 #import "JH_dataController.h"
 #import <CoreData/CoreData.h>
 
-@interface JH_AllJobsView : UITableViewController <UITableViewDataSource, UITableViewDelegate>
+@interface JH_AllJobsView : UITableViewController <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 @property (nonatomic) NSArray *jobs;
 @property (weak, nonatomic) IBOutlet UITableView *jobsList;
 @property (nonatomic) JH_dataController *dc;

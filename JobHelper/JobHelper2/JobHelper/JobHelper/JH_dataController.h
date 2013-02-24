@@ -24,8 +24,8 @@
 
 -(void)selectJob:(int) job;
 -(NSArray*)getJobs;
--(void)addJob:(NSArray*) job;
--(NSURL *)applicationDocumentsDirectory;
+-(void)addJob:(NSMutableArray*) job;
+//-(NSURL *)applicationDocumentsDirectory;
 -(void)addDummy;
 
 

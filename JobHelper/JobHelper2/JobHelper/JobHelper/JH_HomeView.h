@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "EDAM.h"
+#import "EvernoteSDK.h"
 
 @interface JH_HomeView : UIViewController <UITextFieldDelegate>
 

@@ -34,7 +34,7 @@
     }
 }
 
--(NSArray*)getJobs{
+-(NSMutableArray*)getJobs{
     return self.allJobs;
 }
 -(void)addJob:(NSMutableArray*) job{

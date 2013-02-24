@@ -7,15 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JH_dataController.h"
+@class JH_dataController;
 #import "JH_AppDelegate.h"
 
-@interface JH_JobView : UIViewController
+@interface JH_JobView : UIViewController <UITextFieldDelegate, UIScrollViewDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *company;
 @property (strong, nonatomic) IBOutlet UITextField *location;
 @property (strong, nonatomic) IBOutlet UITextField *contact;
 @property (strong, nonatomic) IBOutlet UITextField *jobTitle;
 @property (strong, nonatomic) IBOutlet UITextField *notes;
+//@property (nonatomic getter=isScrollEnabled) BOOL scrollEnabled;
 - (IBAction)updateJob:(id)sender;
+- (IBAction)goBack:(id)sender;
 
 @end
