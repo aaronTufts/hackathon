@@ -13,14 +13,8 @@
 @interface JH_AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
-@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
-
-@property (strong, atomic) JH_dataController* dataController;
-
+@property (nonatomic) JH_dataController *dataController;
 
 -(void)saveContext;
--(NSURL *)applicationDocumentsDirectory;
 
 @end

@@ -197,11 +197,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7E9297016D9567300E150F3 /* main.m in Sources */,
+				A7E9298E16D97C2700E150F3 /* Model.xcdatamodeld in Sources */,
 				A7E9297416D9567300E150F3 /* JH_AppDelegate.m in Sources */,
 				A7E9298016D9567300E150F3 /* JH_HomeView.m in Sources */,
 				A7E9298816D956B600E150F3 /* JH_AllJobsView.m in Sources */,
 				A7E9298B16D95C4E00E150F3 /* JH_JobView.m in Sources */,
-				A7E9298E16D97C2700E150F3 /* Model.xcdatamodeld in Sources */,
 				A7E9299616D99DF200E150F3 /* JH_dataController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
