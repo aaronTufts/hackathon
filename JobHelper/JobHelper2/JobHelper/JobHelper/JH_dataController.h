@@ -8,10 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "JH_AppDelegate.h"
 
 @interface JH_dataController : NSObject
 
 @property (nonatomic) NSManagedObject* curJob;
+@property (strong, nonatomic) NSManagedObject *currentJob;
+@property (strong, nonatomic) NSManagedObjectContext *context;
+@property (strong, nonatomic) NSArray * allJobs;
 
 -(void)selectJob:(int) job;
 

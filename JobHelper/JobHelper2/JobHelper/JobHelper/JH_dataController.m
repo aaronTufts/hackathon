@@ -13,17 +13,33 @@
 -(JH_dataController*) init{
     self = [super init];
     if (self) {
-        // Custom initialization
+        JH_AppDelegate *appDelegate =
+        [[UIApplication sharedApplication] delegate];
+        
+        NSManagedObjectContext *context =
+        [appDelegate managedObjectContext];
+        self.context=context;
     }
     return self;
 }
 
 -(void)selectJob:(int) job{
     NSLog(@"table sent row %d", job);
+    self.curJob=self.allJobs[job];
 }
 
 -(NSArray*)getJobs{
-    return [[NSArray alloc] init];
+    NSEntityDescription *entityDesc =
+    [NSEntityDescription entityForName:@"Job"
+                inManagedObjectContext:self.context];
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:entityDesc];
+    
+    NSError *error;
+    NSArray *objects = [self.context executeFetchRequest:request error:&error];
+    self.allJobs=objects;
+    return objects;
 }
 
 @end
