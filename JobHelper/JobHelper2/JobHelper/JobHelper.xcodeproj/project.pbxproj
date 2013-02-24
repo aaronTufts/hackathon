@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4FD9458B16DA526B00EA6EF8 /* JH_addEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD9458A16DA526B00EA6EF8 /* JH_addEvent.m */; };
 		A72343A316DA40BD00D6DE8C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A72343A216DA40BD00D6DE8C /* QuartzCore.framework */; };
 		A7E9296416D9567300E150F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E9296316D9567300E150F3 /* UIKit.framework */; };
 		A7E9296616D9567300E150F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E9296516D9567300E150F3 /* Foundation.framework */; };
@@ -64,6 +65,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4FD9458916DA526B00EA6EF8 /* JH_addEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JH_addEvent.h; sourceTree = "<group>"; };
+		4FD9458A16DA526B00EA6EF8 /* JH_addEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JH_addEvent.m; sourceTree = "<group>"; };
 		A72343A216DA40BD00D6DE8C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A7E9296016D9567300E150F3 /* JobHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7E9296316D9567300E150F3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -232,6 +235,8 @@
 				A7E9296A16D9567300E150F3 /* Supporting Files */,
 				A7E9298716D956B600E150F3 /* JH_AllJobsView.m */,
 				A7E9298616D956B600E150F3 /* JH_AllJobsView.h */,
+				4FD9458916DA526B00EA6EF8 /* JH_addEvent.h */,
+				4FD9458A16DA526B00EA6EF8 /* JH_addEvent.m */,
 			);
 			path = JobHelper;
 			sourceTree = "<group>";
@@ -532,6 +537,7 @@
 				A7E92D3516D9BB3100E150F3 /* ENMLUtility.m in Sources */,
 				A7E92D3616D9BB3100E150F3 /* NSData+EvernoteSDK.m in Sources */,
 				A7E92D3716D9BB3100E150F3 /* NSDate+EDAMAdditions.m in Sources */,
+				4FD9458B16DA526B00EA6EF8 /* JH_addEvent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

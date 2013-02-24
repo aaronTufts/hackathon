@@ -20,6 +20,9 @@
     self = [super init];
     if (self) {
         self.allJobs=[[NSMutableArray alloc] init];
+        self.allEvents=[[NSMutableDictionary alloc] init];
+        self.curEventName=nil;
+        
         [self addDummy];
     }
     return self;
@@ -46,6 +49,21 @@
     [self addJob:job];
 
 }
+
+
+-(void)updateEvent:(NSString*)name withDate:(NSDate*)date{
+    if(self.curEventName==nil){
+        //new event, add to dictionary
+        self.curEventName=name;
+    }else{
+        NSDate* date=[self.allEvents objectForKey:self.curEventName];
+        
+        [self.allEvents removeObjectForKey:self.curEventName];
+        self.curEventName=name;
+    }
+    [self.allEvents setObject:date forKey:self.curEventName]
+}
+
 /*
 #pragma mark - Core Data stack
 
