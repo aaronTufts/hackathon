@@ -18,8 +18,10 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
-    }
+        _jobs = [NSArray arrayWithObjects: @"1", @"2", @"3", nil];
+        _jobsList.delegate = self;
+        _jobsList.dataSource = self;
+    } 
     return self;
 }
 
@@ -44,25 +46,26 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 1;
+    return [_jobs count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"FooIdentifier";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+  //  static NSString *CellIdentifier = @"JH_JobIdentifier";
+  //  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"JH_JobIdentifier"];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier:@"JH_JobIdentifier"];
+        [[cell textLabel] setText:[_jobs objectAtIndex: [indexPath row]]];
+    }
+    NSLog(@"returning cell");
     return cell;
 }
 
@@ -116,6 +119,7 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+    NSLog(@"user toched cell %d", [indexPath row]);
 }
 
 - (IBAction)addJob:(UIBarButtonItem *)sender {

@@ -46,20 +46,11 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FooIdentifier" id="e8q-BM-n8V">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                                <connections>
-                                    <segue destination="C5g-L7-L23" kind="modal" identifier="goToJobView" modalTransitionStyle="flipHorizontal" id="Pid-qu-bpQ"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
+                        <tableView key="tableFooterView" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" id="qzP-n9-IGq">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </tableView>
                         <connections>
                             <outlet property="dataSource" destination="j3g-ij-0n0" id="ZG8-F1-X2B"/>
                             <outlet property="delegate" destination="j3g-ij-0n0" id="906-zB-TZE"/>
@@ -77,10 +68,14 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="jobsList" destination="YUd-N4-DXm" id="J3w-fI-s29"/>
+                        <outlet property="jobsTable" destination="qzP-n9-IGq" id="ZoH-f9-mOj"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rgU-oB-Mdi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1401" y="330"/>
+            <point key="canvasLocation" x="1518" y="288"/>
         </scene>
         <!--Job View - job view-->
         <scene sceneID="MMk-z7-Z5c">
@@ -101,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yjw-NX-Yhk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1878" y="314"/>
+            <point key="canvasLocation" x="2047" y="500"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ODd-6A-QCr">
@@ -166,6 +161,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="RHN-FV-piP"/>
+        <segue reference="ZYC-eK-nqG"/>
     </inferredMetricsTieBreakers>
 </document>

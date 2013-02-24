@@ -104,8 +104,8 @@
 				A7E9298916D95C4E00E150F3 /* JH_JobView.h */,
 				A7E9298A16D95C4E00E150F3 /* JH_JobView.m */,
 				A7E9296A16D9567300E150F3 /* Supporting Files */,
-				A7E9298616D956B600E150F3 /* JH_AllJobsView.h */,
 				A7E9298716D956B600E150F3 /* JH_AllJobsView.m */,
+				A7E9298616D956B600E150F3 /* JH_AllJobsView.h */,
 			);
 			path = JobHelper;
 			sourceTree = "<group>";
