@@ -26,7 +26,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _jobs = [NSArray arrayWithObjects: @"1", @"2", @"3", nil];
+    JH_AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    _dc = [appDelegate dataController];
+    //_jobs = [NSArray arrayWithObjects: @"1", @"2", @"3", nil];
+    _jobs = [_dc getJobs];
 
 
     // Uncomment the following line to preserve selection between presentations.
@@ -119,13 +122,9 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
-    JH_AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-                                
-    
-    JH_dataController *dc = [appDelegate dataController];
-    [dc selectJob:[indexPath row]];
+    [_dc selectJob:[indexPath row]];
     NSLog(@"user toched cell %d", [indexPath row]);
-    [self performSegueWithIdentifier:@"loginMainSegue" sender:self];
+    [self performSegueWithIdentifier:@"toJobView" sender:self];
 }
 
 - (IBAction)makeJob:(id)sender {

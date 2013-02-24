@@ -10,8 +10,20 @@
 
 @implementation JH_dataController
 
+-(JH_dataController*) init{
+    self = [super init];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
 -(void)selectJob:(int) job{
     NSLog(@"table sent row %d", job);
+}
+
+-(NSDictionary*)getJob{
+    return [[NSDictionary alloc] init];
 }
 
 @end

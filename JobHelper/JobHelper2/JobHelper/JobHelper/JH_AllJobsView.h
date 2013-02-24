@@ -13,6 +13,7 @@
 @interface JH_AllJobsView : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic) NSArray *jobs;
 @property (weak, nonatomic) IBOutlet UITableView *jobsList;
+@property (nonatomic) JH_dataController *dc;
 - (IBAction)makeJob:(id)sender;
 
 @end

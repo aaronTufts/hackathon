@@ -15,4 +15,6 @@
 
 -(void)selectJob:(int) job;
 
+-(NSDictionary*)getJob;
+
 @end

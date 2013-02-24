@@ -46,6 +46,20 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="2X0-L1-kP0">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <segue destination="C5g-L7-L23" kind="modal" identifier="toJobView" modalTransitionStyle="flipHorizontal" id="6Ia-Iy-JQP"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="j3g-ij-0n0" id="ZG8-F1-X2B"/>
                             <outlet property="delegate" destination="j3g-ij-0n0" id="906-zB-TZE"/>
@@ -146,25 +160,6 @@
             <point key="canvasLocation" x="1878" y="-389"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="JH_AllJobsView" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/JH_AllJobsView.h"/>
-            <relationships>
-                <relationship kind="action" name="addJob:" candidateClass="UIBarButtonItem"/>
-                <relationship kind="action" name="makeJob:"/>
-                <relationship kind="outlet" name="jobsList" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="JH_HomeView" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/JH_HomeView.h"/>
-        </class>
-        <class className="JH_JobView" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/JH_JobView.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
