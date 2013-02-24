@@ -58,20 +58,32 @@
 }
 
 - (IBAction)exportToEvernote:(id)sender {
-    /*
+    
     EvernoteSession *session = [EvernoteSession sharedSession];
     [session authenticateWithViewController:self completionHandler:^(NSError *error) {
         if (error || !session.isAuthenticated) {
-            // authentication failed :(
-            // show an alert, etc
-            // ...
+          NSLog(@"can't make note");
         } else {
-            // authentication succeeded :)
-            // do something now that we're authenticated
-            // ...
+             NSLog(@"made note");
+            NSString *noteContent = [NSString stringWithFormat:@"<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
+                                     "<!DOCTYPE en-note SYSTEM \"http://xml.evernote.com/pub/enml2.dtd\">"
+                                     "<en-note>"
+                                     "<span style=\"font-weight:bold;\">Hello Caroline!</span>"
+                                     "<br />"
+                                     "<span>Evernote logo :</span>"
+                                     "<br />"
+                                     "</en-note>"];
+            EDAMNote *newNote = [[EDAMNote alloc] initWithGuid:nil title:@"Test note" content:noteContent contentHash:nil contentLength:noteContent.length created:0 updated:0 deleted:0 active:YES updateSequenceNum:0 notebookGuid:nil tagGuids:nil resources:nil attributes:nil tagNames:nil];
+            NSLog(@"Hey I just met you and this is crazy");
+            [[EvernoteNoteStore noteStore] createNote:newNote success:^(EDAMNote *note) {
+                NSLog(@"I gots the stuff");
+            } failure:^(NSError *error) {
+                NSLog(@"Error creating note : %@",error);
+            }];
+           
         }
     }];
-     */
+     
 }
 
 @end

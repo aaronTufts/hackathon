@@ -29,7 +29,6 @@
     JH_AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     _dc = [appDelegate dataController];
     //_jobs = [NSArray arrayWithObjects: @"1", @"2", @"3", nil];
-    [_dc addDummy];
     _jobs = [_dc getJobs];
     /*
     to get each field, you do [arrayName[i] valueForKey:@"jobTitle"]; "company" for i=0 through arraysize
@@ -132,7 +131,7 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
     [_dc selectJob:[indexPath row]];
-    NSLog(@"user toched cell %d", [indexPath row]);
+   // NSLog(@"user toched cell %d", [indexPath row]);
     [self performSegueWithIdentifier:@"toJobView" sender:self];
 }
 

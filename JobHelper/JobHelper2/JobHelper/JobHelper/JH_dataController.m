@@ -26,7 +26,7 @@
 }
 
 -(void)selectJob:(int) job{
-    NSLog(@"table sent row %d", job);
+   // NSLog(@"table sent row %d", job);
     self.curJob=self.allJobs[job];
 }
 
