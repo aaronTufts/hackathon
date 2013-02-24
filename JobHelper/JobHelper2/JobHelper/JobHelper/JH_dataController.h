@@ -10,19 +10,25 @@
 #import <CoreData/CoreData.h>
 //#import "JH_AppDelegate.h"
 
+
+
 @interface JH_dataController : NSObject
 
-@property (nonatomic) NSManagedObject* curJob;
-@property (strong, nonatomic) NSManagedObject *currentJob;
-@property (strong, nonatomic) NSArray * allJobs;
+@property (nonatomic) NSMutableArray* curJob;
+@property (strong, nonatomic) NSMutableArray* allJobs;
+/*
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
-
+*/
 
 -(void)selectJob:(int) job;
-
 -(NSArray*)getJobs;
+-(void)addJob:(NSArray*) job;
 -(NSURL *)applicationDocumentsDirectory;
+-(void)addDummy;
+
+
+
 
 @end

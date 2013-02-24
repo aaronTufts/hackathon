@@ -164,6 +164,24 @@
             <point key="canvasLocation" x="1878" y="-389"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="JH_AllJobsView" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/JH_AllJobsView.h"/>
+            <relationships>
+                <relationship kind="action" name="makeJob:"/>
+                <relationship kind="outlet" name="jobsList" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="JH_HomeView" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/JH_HomeView.h"/>
+        </class>
+        <class className="JH_JobView" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/JH_JobView.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
