@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "JH_dataController.h"
     
 @interface JobHelperAppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -15,6 +16,8 @@
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
+@property (strong, atomic) JH_dataController* dataController;
 
 
 -(void)saveContext;

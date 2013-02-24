@@ -22,6 +22,7 @@
 		A7E9298B16D95C4E00E150F3 /* JH_JobView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E9298A16D95C4E00E150F3 /* JH_JobView.m */; };
 		A7E9298E16D97C2700E150F3 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7E9298C16D97C2700E150F3 /* Model.xcdatamodeld */; };
 		A7E9299016D97D6600E150F3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E9298F16D97D6600E150F3 /* CoreData.framework */; };
+		A7E9299616D99DF200E150F3 /* JH_dataController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E9299516D99DF200E150F3 /* JH_dataController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,8 @@
 		A7E9298A16D95C4E00E150F3 /* JH_JobView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JH_JobView.m; sourceTree = "<group>"; };
 		A7E9298D16D97C2700E150F3 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		A7E9298F16D97D6600E150F3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A7E9299416D99DF200E150F3 /* JH_dataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JH_dataController.h; sourceTree = "<group>"; };
+		A7E9299516D99DF200E150F3 /* JH_dataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JH_dataController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +98,8 @@
 		A7E9296916D9567300E150F3 /* JobHelper */ = {
 			isa = PBXGroup;
 			children = (
+				A7E9299416D99DF200E150F3 /* JH_dataController.h */,
+				A7E9299516D99DF200E150F3 /* JH_dataController.m */,
 				A7E9297216D9567300E150F3 /* JobHelperAppDelegate.h */,
 				A7E9297316D9567300E150F3 /* JobHelperAppDelegate.m */,
 				A7E9297B16D9567300E150F3 /* MainStoryboard.storyboard */,
@@ -197,6 +202,7 @@
 				A7E9298816D956B600E150F3 /* JH_AllJobsView.m in Sources */,
 				A7E9298B16D95C4E00E150F3 /* JH_JobView.m in Sources */,
 				A7E9298E16D97C2700E150F3 /* Model.xcdatamodeld in Sources */,
+				A7E9299616D99DF200E150F3 /* JH_dataController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

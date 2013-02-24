@@ -11,8 +11,6 @@
 @interface JH_AllJobsView : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic) NSArray *jobs;
 @property (weak, nonatomic) IBOutlet UITableView *jobsList;
-
-
-- (IBAction)addJob:(UIBarButtonItem *)sender;
+- (IBAction)makeJob:(id)sender;
 
 @end

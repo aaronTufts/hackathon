@@ -18,9 +18,6 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        _jobs = [NSArray arrayWithObjects: @"1", @"2", @"3", nil];
-        _jobsList.delegate = self;
-        _jobsList.dataSource = self;
     } 
     return self;
 }
@@ -28,6 +25,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _jobs = [NSArray arrayWithObjects: @"1", @"2", @"3", nil];
+
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -63,8 +62,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"JH_JobIdentifier"];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier:@"JH_JobIdentifier"];
-        [[cell textLabel] setText:[_jobs objectAtIndex: [indexPath row]]];
     }
+    cell.textLabel.text = [_jobs objectAtIndex:indexPath.row];
     NSLog(@"returning cell");
     return cell;
 }
@@ -119,7 +118,11 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+    
     NSLog(@"user toched cell %d", [indexPath row]);
+}
+
+- (IBAction)makeJob:(id)sender {
 }
 
 - (IBAction)addJob:(UIBarButtonItem *)sender {
