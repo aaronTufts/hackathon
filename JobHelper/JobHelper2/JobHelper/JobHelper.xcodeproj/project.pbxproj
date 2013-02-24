@@ -12,7 +12,7 @@
 		A7E9296816D9567300E150F3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E9296716D9567300E150F3 /* CoreGraphics.framework */; };
 		A7E9296E16D9567300E150F3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7E9296C16D9567300E150F3 /* InfoPlist.strings */; };
 		A7E9297016D9567300E150F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E9296F16D9567300E150F3 /* main.m */; };
-		A7E9297416D9567300E150F3 /* JobHelperAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E9297316D9567300E150F3 /* JobHelperAppDelegate.m */; };
+		A7E9297416D9567300E150F3 /* JH_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E9297316D9567300E150F3 /* JH_AppDelegate.m */; };
 		A7E9297616D9567300E150F3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E9297516D9567300E150F3 /* Default.png */; };
 		A7E9297816D9567300E150F3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E9297716D9567300E150F3 /* Default@2x.png */; };
 		A7E9297A16D9567300E150F3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E9297916D9567300E150F3 /* Default-568h@2x.png */; };
@@ -34,8 +34,8 @@
 		A7E9296D16D9567300E150F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A7E9296F16D9567300E150F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A7E9297116D9567300E150F3 /* JobHelper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JobHelper-Prefix.pch"; sourceTree = "<group>"; };
-		A7E9297216D9567300E150F3 /* JobHelperAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JobHelperAppDelegate.h; sourceTree = "<group>"; };
-		A7E9297316D9567300E150F3 /* JobHelperAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JobHelperAppDelegate.m; sourceTree = "<group>"; };
+		A7E9297216D9567300E150F3 /* JH_AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JH_AppDelegate.h; sourceTree = "<group>"; };
+		A7E9297316D9567300E150F3 /* JH_AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JH_AppDelegate.m; sourceTree = "<group>"; };
 		A7E9297516D9567300E150F3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		A7E9297716D9567300E150F3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		A7E9297916D9567300E150F3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -100,8 +100,8 @@
 			children = (
 				A7E9299416D99DF200E150F3 /* JH_dataController.h */,
 				A7E9299516D99DF200E150F3 /* JH_dataController.m */,
-				A7E9297216D9567300E150F3 /* JobHelperAppDelegate.h */,
-				A7E9297316D9567300E150F3 /* JobHelperAppDelegate.m */,
+				A7E9297216D9567300E150F3 /* JH_AppDelegate.h */,
+				A7E9297316D9567300E150F3 /* JH_AppDelegate.m */,
 				A7E9297B16D9567300E150F3 /* MainStoryboard.storyboard */,
 				A7E9297E16D9567300E150F3 /* JH_HomeView.h */,
 				A7E9297F16D9567300E150F3 /* JH_HomeView.m */,
@@ -197,7 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7E9297016D9567300E150F3 /* main.m in Sources */,
-				A7E9297416D9567300E150F3 /* JobHelperAppDelegate.m in Sources */,
+				A7E9297416D9567300E150F3 /* JH_AppDelegate.m in Sources */,
 				A7E9298016D9567300E150F3 /* JH_HomeView.m in Sources */,
 				A7E9298816D956B600E150F3 /* JH_AllJobsView.m in Sources */,
 				A7E9298B16D95C4E00E150F3 /* JH_JobView.m in Sources */,

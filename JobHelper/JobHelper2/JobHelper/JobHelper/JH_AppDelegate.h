@@ -10,7 +10,7 @@
 #import <CoreData/CoreData.h>
 #import "JH_dataController.h"
     
-@interface JobHelperAppDelegate : UIResponder <UIApplicationDelegate>
+@interface JH_AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;

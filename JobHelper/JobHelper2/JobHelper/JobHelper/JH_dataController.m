@@ -10,4 +10,8 @@
 
 @implementation JH_dataController
 
+-(void)selectJob:(int) job{
+    NSLog(@"table sent row %d", job);
+}
+
 @end

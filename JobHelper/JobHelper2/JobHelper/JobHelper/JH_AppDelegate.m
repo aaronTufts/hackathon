@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 j.a.m. All rights reserved.
 //
 
-#import "JobHelperAppDelegate.h"
+#import "JH_AppDelegate.h"
 
-@implementation JobHelperAppDelegate
+@implementation JH_AppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;

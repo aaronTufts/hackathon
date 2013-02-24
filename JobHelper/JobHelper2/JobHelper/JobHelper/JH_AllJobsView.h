@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JH_AppDelegate.h"
+#import "JH_dataController.h"
 
 @interface JH_AllJobsView : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic) NSArray *jobs;

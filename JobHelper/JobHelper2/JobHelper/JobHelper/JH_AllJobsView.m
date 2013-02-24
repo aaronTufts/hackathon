@@ -8,6 +8,7 @@
 
 #import "JH_AllJobsView.h"
 
+
 @interface JH_AllJobsView ()
 
 @end
@@ -118,7 +119,11 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+    JH_AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+                                
     
+    JH_dataController *dc = [appDelegate dataController];
+    [dc selectJob:[indexPath row]];
     NSLog(@"user toched cell %d", [indexPath row]);
 }
 

@@ -7,9 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
 @interface JH_dataController : NSObject
 
+@property (nonatomic) NSManagedObject* curJob;
 
+-(void)selectJob:(int) job;
 
 @end
