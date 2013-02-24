@@ -39,7 +39,7 @@
 }
 -(void)addJob:(NSMutableArray*) job{
     [self.allJobs addObject:job];
-    
+    self.curJob = job;
 }
 -(void)addDummy{
     NSMutableArray* job = [NSMutableArray arrayWithObjects:@"jobTitle",@"company",@"contact",@"location",@"notes",nil];
