@@ -125,6 +125,7 @@
     JH_dataController *dc = [appDelegate dataController];
     [dc selectJob:[indexPath row]];
     NSLog(@"user toched cell %d", [indexPath row]);
+    [self performSegueWithIdentifier:@"loginMainSegue" sender:self];
 }
 
 - (IBAction)makeJob:(id)sender {
