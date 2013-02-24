@@ -13,6 +13,11 @@
 -(void)setAllToFirstResponderStatus;
 -(void)removeAllFirstResponderStatus;
 
+- (void)textFieldDidBeginEditing:(UITextField *)textField;
+- (void)keyboardWasShown:(NSNotification *)notification;
+- (void)keyboardWillHide:(NSNotification *)notification;
+- (void)textFieldDidEndEditing:(UITextField *)textField;
+
 @end
 
 @implementation JH_JobView
@@ -21,7 +26,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {;
-        
+        [_notes.layer setBorderWidth:4.0f];
+        [_notes.layer setBorderColor:[[UIColor blackColor] CGColor]];
     }
     return self;
 }
@@ -48,9 +54,16 @@
     JH_AppDelegate *appDelegate =
     [[UIApplication sharedApplication] delegate];
    
-    [self setAllToFirstResponderStatus];
-    NSLog(@"in view did log");
+   // [self setAllToFirstResponderStatus];
+    NSLog(@"in view did load");
     JH_dataController *data = [appDelegate dataController];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                          selector:@selector(keyboardWasShown:)
+                                                 name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillHide:)
+                                                 name:UIKeyboardWillHideNotification object:nil];
     
     if(data.curJob==nil){
         _jobTitle.text= @"";
@@ -67,6 +80,44 @@
     }
     //@"jobTitle",@"company",@"contact",@"location",@"notes"
 }
+
+- (void)keyboardWasShown:(NSNotification *)notification
+{
+    NSLog(@"keyboard shown");
+    // Step 1: Get the size of the keyboard.
+    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    // Step 2: Adjust the bottom content inset of your scroll view by the keyboard height.
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize.height, 0.0);
+    _jobViewScroll.contentInset = contentInsets;
+    _jobViewScroll.scrollIndicatorInsets = contentInsets;
+    // Step 3: Scroll the target text field into view.
+    CGRect aRect = self.view.frame;
+    aRect.size.height -= keyboardSize.height;
+    if (!CGRectContainsPoint(aRect, _activeTextField.frame.origin) ) {
+        CGPoint scrollPoint = CGPointMake(0.0, _activeTextField.frame.origin.y - (keyboardSize.height-15));
+        [_jobViewScroll setContentOffset:scrollPoint animated:YES];
+    }
+}
+
+- (void) keyboardWillHide:(NSNotification *)notification {
+    NSLog(@"keyboard hiding");
+    UIEdgeInsets contentInsets = UIEdgeInsetsZero;
+    _jobViewScroll.contentInset = contentInsets;
+    _jobViewScroll.scrollIndicatorInsets = contentInsets;
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    self.activeTextField = textField;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    self.activeTextField = nil;
+}
+
+
+
 - (void)updateJob:(id)sender{
     JH_AppDelegate *appDelegate =
     [[UIApplication sharedApplication] delegate];
