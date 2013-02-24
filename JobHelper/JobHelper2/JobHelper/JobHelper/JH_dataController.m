@@ -22,8 +22,8 @@
     NSLog(@"table sent row %d", job);
 }
 
--(NSDictionary*)getJob{
-    return [[NSDictionary alloc] init];
+-(NSArray*)getJobs{
+    return [[NSArray alloc] init];
 }
 
 @end
