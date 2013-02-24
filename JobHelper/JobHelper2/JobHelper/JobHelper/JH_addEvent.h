@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "JH_AppDelegate.h"
 
-@interface JH_addEvent : UIViewController
+@interface JH_addEvent : UIViewController <UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextField *eventName;
 @property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
 
-
+- (IBAction)saveEvent:(id)sender;
 @end

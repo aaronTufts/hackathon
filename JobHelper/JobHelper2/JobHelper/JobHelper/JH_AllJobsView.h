@@ -14,6 +14,7 @@
 @interface JH_AllJobsView : UITableViewController <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 @property (nonatomic) NSArray *jobs;
 @property (weak, nonatomic) IBOutlet UITableView *jobsList;
+- (IBAction)exportJobToEvernote:(id)sender;
 @property (nonatomic) JH_dataController *dc;
 - (IBAction)makeJob:(id)sender;
 

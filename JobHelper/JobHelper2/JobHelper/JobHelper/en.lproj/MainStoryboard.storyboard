@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--add Event-->
         <scene sceneID="kk0-Cf-e8H">
             <objects>
-                <viewController id="DWg-OO-Owt" sceneMemberID="viewController">
+                <viewController id="DWg-OO-Owt" customClass="JH_addEvent" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FTv-FH-GTz">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -42,8 +42,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 </timeZone>
                             </datePicker>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="STm-oF-Hv9">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="IfR-aN-hwG"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="DWg-OO-Owt" id="HYD-Jg-waT"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Event Info:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6u-M2-J2x">
                                 <constraints>
@@ -56,19 +62,30 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="DtC-n7-1G0" firstAttribute="trailing" secondItem="FTv-FH-GTz" secondAttribute="trailing" type="default" id="OJH-YP-nuW"/>
-                            <constraint firstAttribute="trailing" secondItem="STm-oF-Hv9" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="QtC-sv-kjA"/>
-                            <constraint firstItem="STm-oF-Hv9" firstAttribute="top" secondItem="j6u-M2-J2x" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="SKq-8r-KiR"/>
-                            <constraint firstItem="j6u-M2-J2x" firstAttribute="leading" secondItem="FTv-FH-GTz" secondAttribute="leading" constant="28" id="WrS-4a-Hw2"/>
-                            <constraint firstItem="DtC-n7-1G0" firstAttribute="leading" secondItem="FTv-FH-GTz" secondAttribute="leading" type="default" id="tUT-gR-9Bi"/>
-                            <constraint firstItem="j6u-M2-J2x" firstAttribute="top" secondItem="FTv-FH-GTz" secondAttribute="top" constant="238" id="tuL-Xu-mbd"/>
-                            <constraint firstItem="STm-oF-Hv9" firstAttribute="leading" secondItem="FTv-FH-GTz" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="wG7-pB-ou8"/>
-                            <constraint firstItem="DtC-n7-1G0" firstAttribute="top" secondItem="FTv-FH-GTz" secondAttribute="top" type="default" id="yAn-0C-Zno"/>
+                            <constraint firstItem="j6u-M2-J2x" firstAttribute="top" secondItem="FTv-FH-GTz" secondAttribute="top" constant="20" symbolic="YES" type="default" id="Opf-Gk-F4j"/>
+                            <constraint firstItem="DtC-n7-1G0" firstAttribute="centerX" secondItem="STm-oF-Hv9" secondAttribute="centerX" type="default" id="Sla-8R-eju"/>
+                            <constraint firstItem="STm-oF-Hv9" firstAttribute="leading" secondItem="FTv-FH-GTz" secondAttribute="leading" constant="13" id="cAx-qm-1Fa"/>
+                            <constraint firstItem="j6u-M2-J2x" firstAttribute="leading" secondItem="FTv-FH-GTz" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="kzF-VR-Dze"/>
+                            <constraint firstItem="STm-oF-Hv9" firstAttribute="top" secondItem="j6u-M2-J2x" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="lib-j1-vfp"/>
+                            <constraint firstItem="DtC-n7-1G0" firstAttribute="top" secondItem="STm-oF-Hv9" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="vea-VZ-cih"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hUh-JF-UDP">
-                        <barButtonItem key="leftBarButtonItem" title="save and return " id="NRs-RA-Phs"/>
+                        <barButtonItem key="leftBarButtonItem" title="return" id="2Ej-aJ-I3d">
+                            <connections>
+                                <segue destination="d3H-Mn-BAR" kind="modal" identifier="backFromAddEvent" modalTransitionStyle="flipHorizontal" id="WIR-Fs-Nn5"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="save" id="g7k-31-rpW">
+                            <connections>
+                                <action selector="saveEvent:" destination="DWg-OO-Owt" id="xfN-z1-GKv"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="datePicker" destination="DtC-n7-1G0" id="ams-Yf-0WP"/>
+                        <outlet property="eventName" destination="STm-oF-Hv9" id="Bri-nZ-D1A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8cG-3M-MZv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -82,17 +99,22 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="53Y-o1-vE7">
-                                <items>
-                                    <barButtonItem title="edit toDo list" id="1dz-4J-xDv"/>
-                                </items>
-                            </toolbar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cEC-aV-daZ">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="326" id="0tZ-bL-Bd8"/>
                                     <constraint firstAttribute="height" constant="467" id="n1q-NT-FPd"/>
                                 </constraints>
+                                <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="53Y-o1-vE7">
+                                    <rect key="frame" x="0.0" y="66" width="326" height="44"/>
+                                    <items>
+                                        <barButtonItem title="add event" id="LSa-eV-0eB">
+                                            <connections>
+                                                <action selector="goToMakeEventPage:" destination="2" id="jSW-Tb-8nZ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </items>
+                                </toolbar>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="eventCell" id="wSD-zF-Mvy">
                                         <rect key="frame" x="0.0" y="22" width="326" height="44"/>
@@ -107,15 +129,16 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="2" id="qBy-cv-2cW"/>
+                                    <outlet property="delegate" destination="2" id="ono-ly-dlq"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="cEC-aV-daZ" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="VSq-Be-EBm"/>
-                            <constraint firstItem="53Y-o1-vE7" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="X1b-kq-bQW"/>
-                            <constraint firstItem="53Y-o1-vE7" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="dpb-rX-g3q"/>
-                            <constraint firstItem="cEC-aV-daZ" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="nQG-dg-dyH"/>
-                            <constraint firstItem="53Y-o1-vE7" firstAttribute="top" secondItem="cEC-aV-daZ" secondAttribute="bottom" type="default" id="sFg-cS-bDP"/>
+                            <constraint firstItem="cEC-aV-daZ" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="c0K-Tz-RgK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ULX-gw-zA9">
@@ -130,10 +153,13 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="eventsList" destination="cEC-aV-daZ" id="ioR-vd-xyg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1327" y="-274"/>
+            <point key="canvasLocation" x="1315" y="-282"/>
         </scene>
         <!--All Jobs View - my jobs-->
         <scene sceneID="nuz-mi-Mer">
@@ -143,8 +169,19 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="MRl-QM-X8J">
+                            <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <items>
+                                <barButtonItem title="export all to Evernote" id="Ppa-ip-jwZ">
+                                    <connections>
+                                        <action selector="exportJobToEvernote:" destination="j3g-ij-0n0" id="vN1-cA-5G2"/>
+                                    </connections>
+                                </barButtonItem>
+                            </items>
+                        </toolbar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="2X0-L1-kP0">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="JH_JobIdentifier" id="2X0-L1-kP0">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -177,7 +214,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rgU-oB-Mdi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1518" y="288"/>
+            <point key="canvasLocation" x="1370" y="383"/>
         </scene>
         <!--Job View-->
         <scene sceneID="MMk-z7-Z5c">
@@ -327,7 +364,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="c5w-5w-xs9">
-                        <barButtonItem key="leftBarButtonItem" title="circle back" id="1mX-RF-9WN">
+                        <barButtonItem key="leftBarButtonItem" title="back" id="1mX-RF-9WN">
                             <connections>
                                 <action selector="goBack:" destination="lZb-a2-tGY" id="arB-jm-dBl"/>
                                 <segue destination="qdj-LY-Pmu" kind="modal" identifier="backToAllJobs" modalTransitionStyle="flipHorizontal" id="yfk-Bs-HGO"/>
@@ -432,6 +469,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <class className="JH_AllJobsView" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/JH_AllJobsView.h"/>
             <relationships>
+                <relationship kind="action" name="exportJobToEvernote:"/>
                 <relationship kind="action" name="makeJob:"/>
                 <relationship kind="outlet" name="jobsList" candidateClass="UITableView"/>
             </relationships>
@@ -440,6 +478,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <source key="sourceIdentifier" type="project" relativePath="./Classes/JH_HomeView.h"/>
             <relationships>
                 <relationship kind="action" name="exportToEvernote:"/>
+                <relationship kind="action" name="goToMakeEventPage:"/>
+                <relationship kind="outlet" name="eventsList" candidateClass="UITableView"/>
             </relationships>
         </class>
         <class className="JH_JobView" superclassName="UIViewController">
@@ -456,6 +496,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <relationship kind="outlet" name="notes" candidateClass="UITextView"/>
             </relationships>
         </class>
+        <class className="JH_addEvent" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/JH_addEvent.h"/>
+            <relationships>
+                <relationship kind="action" name="saveEvent:"/>
+                <relationship kind="outlet" name="datePicker" candidateClass="UIDatePicker"/>
+                <relationship kind="outlet" name="eventName" candidateClass="UITextField"/>
+            </relationships>
+        </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
@@ -467,5 +515,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="RHN-FV-piP"/>
+        <segue reference="HqH-5R-857"/>
     </inferredMetricsTieBreakers>
 </document>

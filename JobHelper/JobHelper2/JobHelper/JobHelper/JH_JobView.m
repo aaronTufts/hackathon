@@ -35,11 +35,13 @@
     return self;
 }
 -(void)setAllToFirstResponderStatus{
-    [self.company becomeFirstResponder];
-    [self.location becomeFirstResponder];
-    [self.contact becomeFirstResponder];
-    [self.notes becomeFirstResponder];
-    [self.jobTitle becomeFirstResponder];
+    /*
+    self.company.allowsEditingTextAttributes = TRUE;
+    self.location.allowsEditingTextAttributes = TRUE;
+    self.contact.allowsEditingTextAttributes = TRUE;
+    self.notes.allowsEditingTextAttributes = TRUE;
+    self.jobTitle.allowsEditingTextAttributes = TRUE;
+     */
 }
 
 -(void)removeAllFirstResponderStatus{
@@ -57,7 +59,7 @@
     JH_AppDelegate *appDelegate =
     [[UIApplication sharedApplication] delegate];
    
-   // [self setAllToFirstResponderStatus];
+    //[self setAllToFirstResponderStatus];
     NSLog(@"in view did load");
     JH_dataController *data = [appDelegate dataController];
     
@@ -199,9 +201,9 @@
             NSString *middle = [self buildNoteMiddle];
             
             NSString *end = [NSString stringWithFormat:@"</en-note>"];
-                             
+            NSString *titleString = [NSString stringWithFormat:@"%@",  _company.text];
             NSString *noteContent = [NSString stringWithFormat:@"%@ %@ %@", front, middle, end];
-            EDAMNote *newNote = [[EDAMNote alloc] initWithGuid:nil title:@"Test note" content:noteContent contentHash:nil contentLength:noteContent.length created:0 updated:0 deleted:0 active:YES updateSequenceNum:0 notebookGuid:nil tagGuids:nil resources:nil attributes:nil tagNames:nil];
+            EDAMNote *newNote = [[EDAMNote alloc] initWithGuid:nil title:titleString content:noteContent contentHash:nil contentLength:noteContent.length created:0 updated:0 deleted:0 active:YES updateSequenceNum:0 notebookGuid:nil tagGuids:nil resources:nil attributes:nil tagNames:nil];
             [[EvernoteNoteStore noteStore] createNote:newNote success:^(EDAMNote *note) {
                 NSLog(@"Note exported successfully");
             } failure:^(NSError *error) {

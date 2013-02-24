@@ -51,17 +51,17 @@
 }
 
 
--(void)updateEvent:(NSString*)name withDate:(NSDate*)date{
+-(void)updateEvent:(NSMutableString*)name withDate:(NSDate*)date{
+    NSLog(@"IN EVENT");
     if(self.curEventName==nil){
         //new event, add to dictionary
         self.curEventName=name;
     }else{
-        NSDate* date=[self.allEvents objectForKey:self.curEventName];
         
         [self.allEvents removeObjectForKey:self.curEventName];
         self.curEventName=name;
     }
-    [self.allEvents setObject:date forKey:self.curEventName]
+    [self.allEvents setObject:date forKey:self.curEventName];
 }
 
 /*

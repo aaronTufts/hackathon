@@ -25,6 +25,53 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    // Return the number of sections.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    JH_AppDelegate *appDelegate =
+    [[UIApplication sharedApplication] delegate];
+    
+    JH_dataController *data = [appDelegate dataController];
+    NSMutableDictionary* events= [data allEvents];
+    
+    // Return the number of rows in the section.
+    NSLog(@"aaa%d",[events count]);
+    
+    return [events count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //  static NSString *CellIdentifier = @"JH_JobIdentifier";
+    //  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"eventCell"];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier:@"eventCell"];
+    }
+    
+    //NSString *jobText = [[NSString alloc] initWithFormat: @"%@ at %@", [[_jobs objectAtIndex:indexPath.row] valueForKey:@"jobTitle"], [[_jobs objectAtIndex:indexPath.row] valueForKey:@"company"]];
+    JH_AppDelegate *appDelegate =
+    [[UIApplication sharedApplication] delegate];
+    
+    JH_dataController *data = [appDelegate dataController];
+    NSMutableDictionary* events= [data allEvents];
+    
+    NSArray* sortedEvents=[events keysSortedByValueUsingSelector:@selector(compare:)];
+    NSString* eventToDisplay = [sortedEvents objectAtIndex:indexPath.row];
+    NSString *jobText = [[NSString alloc] initWithFormat: @"%@",eventToDisplay];
+    NSLog(@"%@",jobText);
+    
+    cell.textLabel.text = jobText;
+    // NSLog(@"returning cell");
+    return cell;
+}
+
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -36,6 +83,38 @@
            success:(void(^)(EDAMNote *note))success
            failure:(void(^)(NSError *error))failure{
     
+}
+
+-(IBAction)goToMakeEventPage:(id)sender{
+    JH_AppDelegate *appDelegate =
+    [[UIApplication sharedApplication] delegate];
+    
+    JH_dataController *data = [appDelegate dataController];
+    [data setCurEventName:nil];
+    
+    [self performSegueWithIdentifier:@"toMakeEventPage" sender:self];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Navigation logic may go here. Create and push another view controller.
+    /*
+     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+     // ...
+     // Pass the selected object to the new view controller.
+     [self.navigationController pushViewController:detailViewController animated:YES];
+     */
+  //  [_dc selectJob:[indexPath row]];
+    // NSLog(@"user toched cell %d", [indexPath row]);
+    NSString* event=[_eventsList cellForRowAtIndexPath:indexPath].textLabel.text;
+    JH_AppDelegate *appDelegate =
+    [[UIApplication sharedApplication] delegate];
+    
+    JH_dataController *data = [appDelegate dataController];
+    
+    [data setCurEventName:event];
+    
+    [self performSegueWithIdentifier:@"toMakeEventPage" sender:self];
 }
 
 
