@@ -94,11 +94,12 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QM8-t4-eU0">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" translatesAutoresizingMaskIntoConstraints="NO" id="QM8-t4-eU0">
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ecb-Zg-TNj">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ecb-Zg-TNj">
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="304" id="EAO-Mf-dR3"/>
+                                            <constraint firstAttribute="height" constant="35" id="9o2-Fq-0u1"/>
+                                            <constraint firstAttribute="width" constant="304" id="cAk-BR-aBS"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -106,32 +107,34 @@
                                             <outlet property="delegate" destination="lZb-a2-tGY" id="8li-IC-oFA"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P9X-ve-Fsr">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P9X-ve-Fsr">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="gaU-jK-7vM"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <outlet property="delegate" destination="lZb-a2-tGY" id="T4U-wk-UnV"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NC3-NF-suz">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NC3-NF-suz">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="eme-Lm-BN7"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <outlet property="delegate" destination="lZb-a2-tGY" id="EMM-3t-nWc"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ChZ-co-fDG">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ChZ-co-fDG">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="QFy-MU-ATz"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <outlet property="delegate" destination="lZb-a2-tGY" id="5aA-Nf-WKH"/>
-                                        </connections>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UAy-3w-0DT">
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="lZb-a2-tGY" id="bQS-2M-IbF"/>
                                         </connections>
                                     </textField>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Company" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00E-Gi-HVO">
@@ -168,34 +171,43 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="I want this job!" translatesAutoresizingMaskIntoConstraints="NO" id="mn5-Nj-nbF">
+                                        <color key="backgroundColor" red="0.81413468070652173" green="0.81413468070652173" blue="0.81413468070652173" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="299" id="CPh-ng-MkB"/>
+                                            <constraint firstAttribute="height" constant="202" id="aqq-uk-ajO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                                    </textView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="NC3-NF-suz" firstAttribute="centerX" secondItem="QM8-t4-eU0" secondAttribute="centerX" type="default" id="0XX-Gw-u7u"/>
-                                    <constraint firstItem="NC3-NF-suz" firstAttribute="trailing" secondItem="P9X-ve-Fsr" secondAttribute="trailing" type="default" id="2zy-mT-YLW"/>
-                                    <constraint firstItem="P9X-ve-Fsr" firstAttribute="leading" secondItem="u7A-k2-ovF" secondAttribute="leading" type="default" id="3cg-o8-qvm"/>
-                                    <constraint firstItem="P9X-ve-Fsr" firstAttribute="top" secondItem="qnP-UJ-OT4" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="4jB-r0-fOa"/>
-                                    <constraint firstAttribute="bottom" secondItem="UAy-3w-0DT" secondAttribute="bottom" constant="243" id="75Y-mK-o7O"/>
-                                    <constraint firstItem="u7A-k2-ovF" firstAttribute="top" secondItem="P9X-ve-Fsr" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="80u-kw-bG7"/>
-                                    <constraint firstItem="ChZ-co-fDG" firstAttribute="leading" secondItem="coy-Fg-S3N" secondAttribute="leading" type="default" id="8B1-fi-YrF"/>
-                                    <constraint firstItem="UAy-3w-0DT" firstAttribute="top" secondItem="VWF-UY-Naf" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="DBo-tY-6iu"/>
-                                    <constraint firstItem="NC3-NF-suz" firstAttribute="leading" secondItem="coy-Fg-S3N" secondAttribute="leading" type="default" id="F3S-ou-ChK"/>
-                                    <constraint firstItem="qnP-UJ-OT4" firstAttribute="leading" secondItem="P9X-ve-Fsr" secondAttribute="leading" type="default" id="GtV-MR-2Vp"/>
-                                    <constraint firstItem="NC3-NF-suz" firstAttribute="top" secondItem="u7A-k2-ovF" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="L8c-6Z-fIv"/>
-                                    <constraint firstItem="coy-Fg-S3N" firstAttribute="top" secondItem="NC3-NF-suz" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="LU8-ad-sLN"/>
-                                    <constraint firstItem="ecb-Zg-TNj" firstAttribute="trailing" secondItem="P9X-ve-Fsr" secondAttribute="trailing" type="default" id="Wca-5b-FTS"/>
-                                    <constraint firstItem="VWF-UY-Naf" firstAttribute="leading" secondItem="UAy-3w-0DT" secondAttribute="leading" type="default" id="cKp-61-Hig"/>
-                                    <constraint firstItem="VWF-UY-Naf" firstAttribute="top" secondItem="QM8-t4-eU0" secondAttribute="top" constant="277" id="dRi-Ia-AHQ"/>
-                                    <constraint firstItem="u7A-k2-ovF" firstAttribute="leading" secondItem="NC3-NF-suz" secondAttribute="leading" type="default" id="eYv-q1-9Tc"/>
-                                    <constraint firstItem="ChZ-co-fDG" firstAttribute="top" secondItem="QM8-t4-eU0" secondAttribute="top" constant="246" id="heZ-dd-oF8"/>
-                                    <constraint firstItem="ecb-Zg-TNj" firstAttribute="leading" secondItem="00E-Gi-HVO" secondAttribute="leading" type="default" id="iUp-r9-mEa"/>
-                                    <constraint firstItem="00E-Gi-HVO" firstAttribute="top" secondItem="QM8-t4-eU0" secondAttribute="top" constant="4" id="myD-H8-Up0"/>
-                                    <constraint firstItem="qnP-UJ-OT4" firstAttribute="top" secondItem="QM8-t4-eU0" secondAttribute="top" constant="71" id="olR-op-HYD"/>
-                                    <constraint firstItem="UAy-3w-0DT" firstAttribute="trailing" secondItem="ChZ-co-fDG" secondAttribute="trailing" type="default" id="qFt-yQ-Fue"/>
-                                    <constraint firstAttribute="trailing" secondItem="ecb-Zg-TNj" secondAttribute="trailing" constant="13" id="swP-5t-9e5"/>
-                                    <constraint firstItem="ecb-Zg-TNj" firstAttribute="top" secondItem="QM8-t4-eU0" secondAttribute="top" constant="40" id="tSg-Y7-yM9"/>
-                                    <constraint firstItem="qnP-UJ-OT4" firstAttribute="leading" secondItem="ecb-Zg-TNj" secondAttribute="leading" type="default" id="u2T-Kt-xMB"/>
-                                    <constraint firstItem="VWF-UY-Naf" firstAttribute="leading" secondItem="ChZ-co-fDG" secondAttribute="leading" type="default" id="wCG-Qa-t44"/>
-                                    <constraint firstItem="NC3-NF-suz" firstAttribute="trailing" secondItem="ChZ-co-fDG" secondAttribute="trailing" type="default" id="xAo-fV-2b6"/>
+                                    <constraint firstAttribute="trailing" secondItem="ecb-Zg-TNj" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="0XF-pk-47g"/>
+                                    <constraint firstItem="00E-Gi-HVO" firstAttribute="leading" secondItem="QM8-t4-eU0" secondAttribute="leading" constant="6" id="4kw-Im-O7F"/>
+                                    <constraint firstItem="u7A-k2-ovF" firstAttribute="top" secondItem="QM8-t4-eU0" secondAttribute="top" constant="126" id="73P-ym-Toa"/>
+                                    <constraint firstAttribute="trailing" secondItem="NC3-NF-suz" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Ah8-Hq-BuK"/>
+                                    <constraint firstItem="mn5-Nj-nbF" firstAttribute="top" secondItem="QM8-t4-eU0" secondAttribute="top" constant="275" id="BQP-58-3zf"/>
+                                    <constraint firstItem="qnP-UJ-OT4" firstAttribute="top" secondItem="QM8-t4-eU0" secondAttribute="top" constant="67" id="Jah-Kl-SFq"/>
+                                    <constraint firstItem="VWF-UY-Naf" firstAttribute="top" secondItem="ChZ-co-fDG" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Jb0-Ps-hOu"/>
+                                    <constraint firstItem="ChZ-co-fDG" firstAttribute="leading" secondItem="VWF-UY-Naf" secondAttribute="leading" type="default" id="MCd-jI-HVh"/>
+                                    <constraint firstItem="u7A-k2-ovF" firstAttribute="leading" secondItem="P9X-ve-Fsr" secondAttribute="leading" type="default" id="SXD-P0-BLf"/>
+                                    <constraint firstItem="qnP-UJ-OT4" firstAttribute="leading" secondItem="P9X-ve-Fsr" secondAttribute="leading" type="default" id="VCz-dk-gUu"/>
+                                    <constraint firstItem="ecb-Zg-TNj" firstAttribute="leading" secondItem="qnP-UJ-OT4" secondAttribute="leading" type="default" id="VJC-c8-VJg"/>
+                                    <constraint firstItem="NC3-NF-suz" firstAttribute="top" secondItem="u7A-k2-ovF" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="YcB-Iz-JA9"/>
+                                    <constraint firstItem="P9X-ve-Fsr" firstAttribute="top" secondItem="qnP-UJ-OT4" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="bgi-nK-TNk"/>
+                                    <constraint firstAttribute="trailing" secondItem="P9X-ve-Fsr" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="byv-es-mLV"/>
+                                    <constraint firstItem="00E-Gi-HVO" firstAttribute="top" secondItem="QM8-t4-eU0" secondAttribute="top" type="default" id="cTB-QH-CEj"/>
+                                    <constraint firstItem="coy-Fg-S3N" firstAttribute="leading" secondItem="NC3-NF-suz" secondAttribute="leading" type="default" id="dL3-0o-cJe"/>
+                                    <constraint firstItem="u7A-k2-ovF" firstAttribute="leading" secondItem="NC3-NF-suz" secondAttribute="leading" type="default" id="eR7-Th-zTJ"/>
+                                    <constraint firstItem="ChZ-co-fDG" firstAttribute="leading" secondItem="coy-Fg-S3N" secondAttribute="leading" type="default" id="gQf-Ew-fUY"/>
+                                    <constraint firstItem="00E-Gi-HVO" firstAttribute="leading" secondItem="ecb-Zg-TNj" secondAttribute="leading" type="default" id="k2T-ZA-tli"/>
+                                    <constraint firstAttribute="trailing" secondItem="ChZ-co-fDG" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="m9z-lm-TGZ"/>
+                                    <constraint firstItem="coy-Fg-S3N" firstAttribute="top" secondItem="NC3-NF-suz" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="mPS-jS-7Jz"/>
+                                    <constraint firstAttribute="trailing" secondItem="mn5-Nj-nbF" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="upv-nr-epg"/>
+                                    <constraint firstAttribute="bottom" secondItem="mn5-Nj-nbF" secondAttribute="bottom" constant="7" id="veB-mJ-PCe"/>
+                                    <constraint firstItem="ChZ-co-fDG" firstAttribute="top" secondItem="QM8-t4-eU0" secondAttribute="top" constant="216" id="wRY-sl-YZz"/>
+                                    <constraint firstItem="ecb-Zg-TNj" firstAttribute="top" secondItem="00E-Gi-HVO" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="x3j-Ny-HY1"/>
                                 </constraints>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="22" maxX="0.0" maxY="18"/>
                                 <connections>
@@ -205,10 +217,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="QM8-t4-eU0" firstAttribute="top" secondItem="e5x-Da-OJ9" secondAttribute="top" type="default" id="62a-34-1tZ"/>
-                            <constraint firstItem="QM8-t4-eU0" firstAttribute="leading" secondItem="e5x-Da-OJ9" secondAttribute="leading" constant="-5" id="gwP-Mx-dfJ"/>
-                            <constraint firstAttribute="bottom" secondItem="QM8-t4-eU0" secondAttribute="bottom" constant="-75" id="hue-RP-XTj"/>
-                            <constraint firstItem="QM8-t4-eU0" firstAttribute="centerX" secondItem="e5x-Da-OJ9" secondAttribute="centerX" type="default" id="rP3-K8-3kq"/>
+                            <constraint firstAttribute="bottom" secondItem="QM8-t4-eU0" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="Guz-zz-YBe"/>
+                            <constraint firstAttribute="trailing" secondItem="QM8-t4-eU0" secondAttribute="trailing" constant="-10" id="OGC-wk-v6L"/>
+                            <constraint firstItem="QM8-t4-eU0" firstAttribute="leading" secondItem="e5x-Da-OJ9" secondAttribute="leading" type="default" id="aXu-rO-yzJ"/>
+                            <constraint firstItem="QM8-t4-eU0" firstAttribute="top" secondItem="e5x-Da-OJ9" secondAttribute="top" type="default" id="eYi-8s-c30"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="c5w-5w-xs9">
@@ -228,8 +240,9 @@
                         <outlet property="company" destination="ecb-Zg-TNj" id="m4r-JO-u7H"/>
                         <outlet property="contact" destination="NC3-NF-suz" id="qLY-46-dFk"/>
                         <outlet property="jobTitle" destination="ChZ-co-fDG" id="skb-VQ-kLd"/>
+                        <outlet property="jobViewScroll" destination="QM8-t4-eU0" id="jSI-kI-0aC"/>
                         <outlet property="location" destination="P9X-ve-Fsr" id="h7N-fG-MSm"/>
-                        <outlet property="notes" destination="UAy-3w-0DT" id="dhd-ZF-fYQ"/>
+                        <outlet property="notes" destination="mn5-Nj-nbF" id="yfr-fD-lft"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yjw-NX-Yhk" userLabel="First Responder" sceneMemberID="firstResponder"/>

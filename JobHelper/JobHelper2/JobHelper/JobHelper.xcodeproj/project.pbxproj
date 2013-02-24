@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A72343A316DA40BD00D6DE8C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A72343A216DA40BD00D6DE8C /* QuartzCore.framework */; };
 		A7E9296416D9567300E150F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E9296316D9567300E150F3 /* UIKit.framework */; };
 		A7E9296616D9567300E150F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E9296516D9567300E150F3 /* Foundation.framework */; };
 		A7E9296816D9567300E150F3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E9296716D9567300E150F3 /* CoreGraphics.framework */; };
@@ -63,6 +64,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A72343A216DA40BD00D6DE8C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A7E9296016D9567300E150F3 /* JobHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7E9296316D9567300E150F3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A7E9296516D9567300E150F3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -171,6 +173,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A72343A316DA40BD00D6DE8C /* QuartzCore.framework in Frameworks */,
 				A7E92D3916D9BB6C00E150F3 /* Security.framework in Frameworks */,
 				A7E9299016D97D6600E150F3 /* CoreData.framework in Frameworks */,
 				A7E9296416D9567300E150F3 /* UIKit.framework in Frameworks */,
@@ -185,6 +188,7 @@
 		A7E9295716D9567300E150F3 = {
 			isa = PBXGroup;
 			children = (
+				A72343A216DA40BD00D6DE8C /* QuartzCore.framework */,
 				A7E92D3816D9BB6C00E150F3 /* Security.framework */,
 				A7E92CBB16D9BB3100E150F3 /* evernote-sdk-ios */,
 				A7E9296916D9567300E150F3 /* JobHelper */,
@@ -670,6 +674,7 @@
 				A7E9298516D9567300E150F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
