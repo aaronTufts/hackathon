@@ -39,10 +39,12 @@
 }
 -(void)addJob:(NSMutableArray*) job{
     [self.allJobs addObject:job];
+    
 }
 -(void)addDummy{
     NSMutableArray* job = [NSMutableArray arrayWithObjects:@"jobTitle",@"company",@"contact",@"location",@"notes",nil];
     [self addJob:job];
+
 }
 /*
 #pragma mark - Core Data stack

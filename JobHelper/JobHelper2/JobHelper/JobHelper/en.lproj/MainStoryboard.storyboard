@@ -278,6 +278,7 @@
         <class className="JH_AllJobsView" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/JH_AllJobsView.h"/>
             <relationships>
+                <relationship kind="action" name="addJob:" candidateClass="UIBarButtonItem"/>
                 <relationship kind="action" name="makeJob:"/>
                 <relationship kind="outlet" name="jobsList" candidateClass="UITableView"/>
             </relationships>
@@ -309,6 +310,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="RHN-FV-piP"/>
+        <segue reference="ZYC-eK-nqG"/>
     </inferredMetricsTieBreakers>
 </document>
