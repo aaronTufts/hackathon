@@ -71,11 +71,12 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier:@"JH_JobIdentifier"];
     }
- /*
-    NSString *jobText = [[NSString alloc] initWithFormat: @"%@ at %@", [[_jobs objectAtIndex:indexPath.row] valueForKey:@"jobTitle"], [[_jobs objectAtIndex:indexPath.row] valueForKey:@"company"]];
-  */
+   
+    //NSString *jobText = [[NSString alloc] initWithFormat: @"%@ at %@", [[_jobs objectAtIndex:indexPath.row] valueForKey:@"jobTitle"], [[_jobs objectAtIndex:indexPath.row] valueForKey:@"company"]];
+    NSMutableArray* job=[_jobs objectAtIndex:indexPath.row];
+    NSString *jobText = [[NSString alloc] initWithFormat: @"%@ at %@",[job objectAtIndex:1],[job objectAtIndex:2]];
     
-  //  cell.textLabel.text = jobText;
+    cell.textLabel.text = jobText;
    // NSLog(@"returning cell");
     return cell;
 }

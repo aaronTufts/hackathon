@@ -78,14 +78,7 @@
         }
     }
 }
-            
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    BOOL canHandle = NO;
-    if ([[NSString stringWithFormat:@"en-%@", [[EvernoteSession sharedSession] consumerKey]] isEqualToString:[url scheme]] == YES) {
-        canHandle = [[EvernoteSession sharedSession] canHandleOpenURL:url];
-    }
-    return canHandle;
-}
+     */       
 
 - (BOOL) canHandleSwitchProfileURL:(NSURL *)url {
     NSString *requestURL = [url path];

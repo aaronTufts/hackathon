@@ -58,6 +58,7 @@
 }
 
 - (IBAction)exportToEvernote:(id)sender {
+    /*
     EvernoteSession *session = [EvernoteSession sharedSession];
     [session authenticateWithViewController:self completionHandler:^(NSError *error) {
         if (error || !session.isAuthenticated) {
@@ -70,6 +71,7 @@
             // ...
         }
     }];
+     */
 }
 
 @end
