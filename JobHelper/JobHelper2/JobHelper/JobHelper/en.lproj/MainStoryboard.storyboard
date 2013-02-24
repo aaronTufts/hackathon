@@ -26,7 +26,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ULX-gw-zA9">
-                        <barButtonItem key="leftBarButtonItem" title="export to EverNote" id="3W8-q7-547"/>
+                        <barButtonItem key="leftBarButtonItem" title="export to EverNote" id="3W8-q7-547">
+                            <connections>
+                                <action selector="exportToEvernote:" destination="2" id="Nhe-xy-qn9"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="my jobs" id="rqD-6d-BZM">
                             <connections>
                                 <segue destination="qdj-LY-Pmu" kind="modal" identifier="goToSecondPage" modalTransitionStyle="flipHorizontal" id="RHN-FV-piP"/>
@@ -166,6 +170,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ZYC-eK-nqG"/>
+        <segue reference="RHN-FV-piP"/>
     </inferredMetricsTieBreakers>
 </document>

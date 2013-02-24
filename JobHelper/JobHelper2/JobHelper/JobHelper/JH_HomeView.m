@@ -51,5 +51,26 @@
 }
 */
 
+- (void)createNote:(EDAMNote *)note
+           success:(void(^)(EDAMNote *note))success
+           failure:(void(^)(NSError *error))failure{
+    
+}
+
+- (IBAction)exportToEvernote:(id)sender {
+    EvernoteSession *session = [EvernoteSession sharedSession];
+    [session authenticateWithViewController:self completionHandler:^(NSError *error) {
+        if (error || !session.isAuthenticated) {
+            // authentication failed :(
+            // show an alert, etc
+            // ...
+        } else {
+            // authentication succeeded :)
+            // do something now that we're authenticated
+            // ...
+        }
+    }];
+}
+
 @end
 

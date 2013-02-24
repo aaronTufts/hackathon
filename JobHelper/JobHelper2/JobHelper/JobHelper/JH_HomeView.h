@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EDAM.h"
 
 @interface JH_HomeView : UIViewController <UITextFieldDelegate>
+
+- (void)createNote:(EDAMNote *)note
+           success:(void(^)(EDAMNote *note))success
+           failure:(void(^)(NSError *error))failure;
+- (IBAction)exportToEvernote:(id)sender;
 
 @end

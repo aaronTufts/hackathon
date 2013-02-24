@@ -70,11 +70,12 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier:@"JH_JobIdentifier"];
     }
-   
+ /*
     NSString *jobText = [[NSString alloc] initWithFormat: @"%@ at %@", [[_jobs objectAtIndex:indexPath.row] valueForKey:@"jobTitle"], [[_jobs objectAtIndex:indexPath.row] valueForKey:@"company"]];
+  */
     
-    cell.textLabel.text = jobText;
-    NSLog(@"returning cell");
+  //  cell.textLabel.text = jobText;
+   // NSLog(@"returning cell");
     return cell;
 }
 
@@ -137,6 +138,7 @@
 }
 
 - (IBAction)addJob:(UIBarButtonItem *)sender {
-    
+  [_dc selectJob:-1];
+  [self performSegueWithIdentifier:@"toJobView" sender:self];
 }
 @end

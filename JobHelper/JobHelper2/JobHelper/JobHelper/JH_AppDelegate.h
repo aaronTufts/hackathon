@@ -9,11 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 #import "JH_dataController.h"
+#import "EvernoteSDK.h"
+
     
 @interface JH_AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic) JH_dataController *dataController;
+@property (nonatomic) EvernoteSession *session;
 
 -(void)saveContext;
 
