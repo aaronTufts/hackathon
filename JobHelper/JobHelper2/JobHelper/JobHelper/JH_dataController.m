@@ -7,16 +7,20 @@
 //
 
 #import "JH_dataController.h"
+#import "JH_AppDelegate.h"
 
 @implementation JH_dataController
+/*
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
-
+*/
 
 -(JH_dataController*) init{
     self = [super init];
     if (self) {
+        self.allJobs=[[NSMutableArray alloc] init];
+        [self addDummy];
     }
     return self;
 }
@@ -27,19 +31,16 @@
 }
 
 -(NSArray*)getJobs{
-    NSEntityDescription *entityDesc =
-    [NSEntityDescription entityForName:@"Job"
-                inManagedObjectContext:self.managedObjectContext];
-    
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    [request setEntity:entityDesc];
-    
-    NSError *error;
-    NSArray *objects = [self.managedObjectContext executeFetchRequest:request error:&error];
-    self.allJobs=objects;
-    return objects;
+    return self.allJobs;
 }
-
+-(void)addJob:(NSMutableArray*) job{
+    [self.allJobs addObject:job];
+}
+-(void)addDummy{
+    NSMutableArray* job = [NSMutableArray arrayWithObjects:@"jobTitle",@"company",@"contact",@"location",@"notes",nil];
+    [self addJob:job];
+}
+/*
 #pragma mark - Core Data stack
 
 // Returns the managed object context for the application.
@@ -108,7 +109,7 @@
          
          Lightweight migration will only work for a limited set of schema changes; consult "Core Data Model Versioning and Data Migration Programming Guide" for details.
          
-         */
+         *//*
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
@@ -123,7 +124,7 @@
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
-
+*/
 
 
 

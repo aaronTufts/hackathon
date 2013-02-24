@@ -41,10 +41,10 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-    [self saveContext];
+    //[self saveContext];
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
+/*
 -(void)saveContext
 {
     NSError *error = nil;
@@ -59,7 +59,7 @@
         }
     }
 }
-            
+     */       
 
 
 @end

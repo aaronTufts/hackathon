@@ -29,6 +29,7 @@
     JH_AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     _dc = [appDelegate dataController];
     //_jobs = [NSArray arrayWithObjects: @"1", @"2", @"3", nil];
+    [_dc addDummy];
     _jobs = [_dc getJobs];
     /*
     to get each field, you do [arrayName[i] valueForKey:@"jobTitle"]; "company" for i=0 through arraysize
@@ -71,7 +72,9 @@
         cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier:@"JH_JobIdentifier"];
     }
    
-    NSString *jobText = [[NSString alloc] initWithFormat: @"%@ at %@", [[_jobs objectAtIndex:indexPath.row] valueForKey:@"jobTitle"], [[_jobs objectAtIndex:indexPath.row] valueForKey:@"company"]];
+    //NSString *jobText = [[NSString alloc] initWithFormat: @"%@ at %@", [[_jobs objectAtIndex:indexPath.row] valueForKey:@"jobTitle"], [[_jobs objectAtIndex:indexPath.row] valueForKey:@"company"]];
+    NSMutableArray* job=[_jobs objectAtIndex:indexPath.row];
+    NSString *jobText = [[NSString alloc] initWithFormat: @"%@ at %@",[job objectAtIndex:1],[job objectAtIndex:2]];
     
     cell.textLabel.text = jobText;
     NSLog(@"returning cell");
