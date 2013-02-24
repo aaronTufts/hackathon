@@ -27,7 +27,11 @@
 
 -(void)selectJob:(int) job{
     NSLog(@"table sent row %d", job);
-    self.curJob=self.allJobs[job];
+    if(job==-1){
+        self.curJob=nil;
+    }else{
+        self.curJob=self.allJobs[job];
+    }
 }
 
 -(NSArray*)getJobs{
